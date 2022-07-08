@@ -1,5 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# Ignore all text files - custom added by Julia
+*.txt
+
+
 # dependencies
 /node_modules
 /.pnp

@@ -1,0 +1,71 @@
+@import 'styles/variables.scss';
+@import 'styles/media.scss';
+@import 'styles/mixins.scss';
+
+.wrapper {
+  font-family: $ff-main;
+  @include flexColumn;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+
+  @media (max-width: $bp-tablet) {
+    margin-bottom: 50px;
+  }
+  @media (max-width: $bp-phone) {
+    margin-bottom: 40px;
+  }
+}
+
+.top {
+  margin-bottom: 20px;
+  @include flexColumn;
+}
+
+.title {
+  font-size: $fs-h3;
+  padding: 30px 0 15px 0;
+  text-align: center;
+
+  @media (max-width: $bp-tablet) {
+    font-size: $fs-h4;
+  }
+}
+
+.imagesWrapper {
+  position: relative;
+}
+
+.image {
+  max-width: 600px;
+  padding: 40px 0;
+}
+
+@keyframes animate_grow {
+  0% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+.heart {
+  max-width: 30px;
+  position: absolute;
+  right: 44%;
+  top: 20%;
+  animation: animate_grow 1s infinite;
+
+  @media (max-width: $bp-tablet) {
+    max-width: 20px;
+    top: 23%;
+    right: 42%;
+  }
+}
+
+.paw {
+  margin-top: 20px;
+}

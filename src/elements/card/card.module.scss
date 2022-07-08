@@ -1,0 +1,57 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+@import 'styles/media.scss';
+
+.wrapper {
+  max-width: 250px;
+  // min-width: 200px;
+  height: 350px;
+  border-radius: 10px;
+  font-family: $ff-main;
+  @include flexColumn;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: flex-start;
+  justify-content: flex-start;
+  -webkit-box-shadow: 5px 5px 18px -8px $c-black;
+  box-shadow: 5px 5px 18px -8px $c-black;
+  line-height: 1.5;
+  transition-duration: 0.5s;
+  background-color: $c-white;
+
+  @media (max-width: $bp-desktop) {
+    max-width: 230px;
+  }
+}
+
+.title {
+  font-size: $fs-h4;
+  color: $c-blue;
+  // * Three dots
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.image {
+  max-height: 160px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: $fs-text;
+  font-weight: $fw-normal;
+
+  // * Three dots
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}

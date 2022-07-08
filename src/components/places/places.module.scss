@@ -1,0 +1,69 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+@import 'styles/media.scss';
+
+.wrapper {
+  font-family: $ff-main;
+  margin-bottom: 80px;
+  position: relative;
+
+  @media (max-width: $bp-tablet) {
+    margin-bottom: 40px;
+  }
+  @media (max-width: $bp-phone) {
+    margin-bottom: 20px;
+  }
+}
+
+.top {
+  margin-bottom: 70px;
+  @include flexColumn;
+}
+
+.title {
+  font-size: $fs-h3;
+  padding: 30px 0 15px 0;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (max-width: $bp-tablet) {
+    font-size: $fs-h4;
+  }
+}
+
+.arrowFles {
+  position: relative;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  color: $c-yellow;
+  cursor: pointer;
+  z-index: 100;
+  position: absolute;
+
+  @media (max-width: 1170px) {
+    display: none;
+  }
+}
+
+.arrowLeft {
+  top: calc(50% - 20px);
+  left: calc(20% - 150px);
+  z-index: 100;
+  cursor: pointer;
+
+  @media (max-width: $bp-screen) {
+    left: 20px;
+  }
+}
+
+.arrowRight {
+  bottom: calc(50% - 20px);
+  right: calc(20% - 150px);
+
+  @media (max-width: $bp-screen) {
+    right: 60px;
+  }
+}

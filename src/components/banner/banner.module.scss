@@ -1,0 +1,90 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+@import 'styles/media.scss';
+
+.banner {
+  font-family: $ff-main;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+
+  // ! BG
+  background-image: url(./../../assets/banner-bg.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+}
+
+.bgFilter {
+  // background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(0px) saturate(100%) brightness(70%);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.main {
+  @include flexRow;
+  z-index: 5;
+}
+
+.text {
+  font-size: $fs-h2;
+  color: $c-white;
+  font-weight: $fw-bold;
+  line-height: 1.5;
+  cursor: default;
+
+  @media (max-width: $bp-desktop) {
+    font-size: $fs-h3;
+  }
+  @media (max-width: $bp-tablet) {
+    font-size: $fs-h4;
+    line-height: 2;
+  }
+  @media (max-width: $bp-phone) {
+    font-size: $fs-text;
+    line-height: 2;
+  }
+}
+
+.parts {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+
+  @media (max-width: $bp-phone) {
+    margin-right: 10px;
+  }
+}
+
+.part {
+  min-height: 136px;
+  min-width: 30px;
+
+  @media (max-width: $bp-desktop) {
+    min-width: 25px;
+  }
+  @media (max-width: $bp-tablet) {
+    min-height: 100px;
+    min-width: 20px;
+  }
+  @media (max-width: $bp-phone) {
+    min-height: 80px;
+    min-width: 10px;
+  }
+}
+
+.partBlue {
+  background-color: $c-blue;
+}
+
+.partYellow {
+  background-color: $c-yellow;
+}

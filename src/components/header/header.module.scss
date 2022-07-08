@@ -1,0 +1,40 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+@import 'styles/media.scss';
+
+.header {
+  font-family: $ff-main;
+  font-size: $fs-h2;
+  letter-spacing: 3px;
+  @include header;
+  @include flexColumn;
+  justify-content: center;
+  background-color: $c-white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0.9;
+  min-height: 50px;
+  color: $c-blue-dark;
+  // padding-bottom: 70px;
+  // margin-top: 70px;
+
+  @media (max-width: $bp-tablet) {
+    font-size: $fs-h3;
+  }
+}
+
+.innerText {
+  color: $c-yellow;
+}
+
+// ! Medias
+// $bp-large: 1920px;
+// $bp-screen: 1400px;
+// $bp-desktop: 1024px;
+// $bp-tablet: 768px;
+// $bp-phone: 480px;
+// $bp-small: 320px;
+
+// ! @media (max-width: $bp-tablet) {
+//   ! flex-direction: column;
+// }

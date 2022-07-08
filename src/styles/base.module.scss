@@ -1,0 +1,13 @@
+@import './media.scss';
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media (max-width: $bp-tablet) {
+    padding: 0 20px;
+  }
+}
+
+// import baseStyles from 'styles/base.module.scss';

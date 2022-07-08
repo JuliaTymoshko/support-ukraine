@@ -1,0 +1,38 @@
+@import 'styles/variables.scss';
+@import 'styles/media.scss';
+
+button {
+  width: fit-content;
+  min-height: 80px;
+  padding: 10px 20px;
+  background-color: $c-blue-dark;
+  font-size: $fs-h4;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  color: $c-white;
+
+  @media (max-width: $bp-tablet) {
+    min-height: 70px;
+    font-size: $fs-text;
+  }
+
+  @media (max-width: $bp-phone) {
+    min-height: 60px;
+    font-size: $fs-text;
+  }
+}
+
+// ! Medias
+// $bp-large: 1920px;
+// $bp-screen: 1400px;
+// $bp-desktop: 1024px;
+// $bp-tablet: 768px;
+// $bp-phone: 480px;
+// $bp-small: 320px;
+
+// ! @media (max-width: $bp-tablet) {
+//   ! flex-direction: column;
+// }

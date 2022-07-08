@@ -1,0 +1,16 @@
+@import 'styles/variables.scss';
+@import 'styles/media.scss';
+
+.line {
+  background-color: $c-blue;
+  height: 5px;
+  min-width: 360px;
+
+  @media (max-width: $bp-tablet) {
+    min-width: 300px;
+  }
+
+  @media (max-width: $bp-phone) {
+    min-width: 200px;
+  }
+}

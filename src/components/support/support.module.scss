@@ -1,0 +1,36 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+@import 'styles/media.scss';
+
+.wrapper {
+  font-family: $ff-main;
+  @include flexColumn;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+
+  @media (max-width: $bp-tablet) {
+    margin-bottom: 50px;
+  }
+  @media (max-width: $bp-phone) {
+    margin-bottom: 40px;
+  }
+}
+
+.top {
+  margin-bottom: 20px;
+  @include flexColumn;
+}
+
+.title {
+  font-size: $fs-h3;
+  padding: 30px 0 15px 0;
+  text-align: center;
+
+  @media (max-width: $bp-tablet) {
+    font-size: $fs-h4;
+  }
+}
+
+.image {
+  max-width: 600px;
+}

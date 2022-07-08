@@ -1,0 +1,15 @@
+@import 'styles/variables.scss';
+
+.placesSwiper {
+  .swiper-wrapper {
+    margin-bottom: 100px;
+  }
+
+  // .swiper-pagination {
+  //   border: 3px solid green;
+  // }
+
+  .swiper-pagination-bullet-active {
+    background-color: $c-yellow;
+  }
+}

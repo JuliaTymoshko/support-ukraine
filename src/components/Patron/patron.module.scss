@@ -1,0 +1,49 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+@import 'styles/media.scss';
+
+.wrapper {
+  padding-top: 70px;
+  min-height: 100vh;
+  font-family: $ff-main;
+  margin-bottom: 60px;
+
+  @media (max-width: $bp-tablet) {
+    margin-bottom: 40px;
+  }
+  @media (max-width: $bp-phone) {
+    margin-bottom: 20px;
+  }
+}
+
+.top {
+  margin-bottom: 70px;
+  @include flexColumn;
+}
+
+.title {
+  font-size: $fs-h3;
+  padding: 30px 0 15px 0;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (max-width: $bp-tablet) {
+    font-size: $fs-h4;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  align-items: stretch;
+
+  img {
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}
